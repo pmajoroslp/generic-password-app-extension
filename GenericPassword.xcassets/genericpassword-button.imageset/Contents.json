@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "onepassword-button.png"
+      "filename" : "genericpassword-button.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "onepassword-button@2x.png"
+      "filename" : "genericpassword-button@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "onepassword-button@3x.png"
+      "filename" : "genericpassword-button@3x.png"
     }
   ],
   "info" : {

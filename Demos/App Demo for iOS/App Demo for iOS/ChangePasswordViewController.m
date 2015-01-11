@@ -7,12 +7,12 @@
 //
 
 #import "ChangePasswordViewController.h"
-#import "OnePasswordExtension.h"
+#import "GenericPasswordExtension.h"
 #import "LoginInformation.h"
 
 @interface ChangePasswordViewController ()
 
-@property (weak, nonatomic) IBOutlet UIButton *onepasswordSigninButton;
+@property (weak, nonatomic) IBOutlet UIButton *genericpasswordSigninButton;
 @property (weak, nonatomic) IBOutlet UITextField *oldPasswordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *freshPasswordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
@@ -25,14 +25,14 @@
 	[super viewDidLoad];
 	[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 	[self.view setBackgroundColor:[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"login-background.png"]]];
-	[self.onepasswordSigninButton setHidden:![[OnePasswordExtension sharedExtension] isAppExtensionAvailable]];
+	[self.genericpasswordSigninButton setHidden:![[GenericPasswordExtension sharedExtension] isAppExtensionAvailable]];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
 	return UIStatusBarStyleLightContent;
 }
 
-- (IBAction)changePasswordIn1Password:(id)sender {
+- (IBAction)changePasswordInGenericPassword:(id)sender {
 	NSString *changedPassword = self.freshPasswordTextField.text ? : @"";
 
 	// Validate that the new and confirmation passwords match.
@@ -53,7 +53,7 @@
 
 	NSDictionary *loginDetails = @{
 									  AppExtensionTitleKey: @"ACME",
-									  AppExtensionUsernameKey: username, // 1Password will prompt the user to create a new item if no matching logins are found with this username.
+									  AppExtensionUsernameKey: username, // GenericPassword will prompt the user to create a new item if no matching logins are found with this username.
 									  AppExtensionPasswordKey: changedPassword,
 									  AppExtensionOldPasswordKey: self.oldPasswordTextField.text ? : @"",
 									  AppExtensionNotesKey: @"Saved with the ACME app",
@@ -67,10 +67,10 @@
 
 	__weak typeof (self) miniMe = self;
 
-	[[OnePasswordExtension sharedExtension] changePasswordForLoginForURLString:@"https://www.acme.com" loginDetails:loginDetails passwordGenerationOptions:passwordGenerationOptions forViewController:self sender:sender completion:^(NSDictionary *loginDict, NSError *error) {
+	[[GenericPasswordExtension sharedExtension] changePasswordForLoginForURLString:@"https://www.acme.com" loginDetails:loginDetails passwordGenerationOptions:passwordGenerationOptions forViewController:self sender:sender completion:^(NSDictionary *loginDict, NSError *error) {
 		if (!loginDict) {
 			if (error.code != AppExtensionErrorCodeCancelledByUser) {
-				NSLog(@"Error invoking 1Password App Extension for find login: %@", error);
+				NSLog(@"Error invoking GenericPassword App Extension for find login: %@", error);
 			}
 			return;
 		}

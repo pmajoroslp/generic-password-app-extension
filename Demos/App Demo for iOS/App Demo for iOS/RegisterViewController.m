@@ -1,18 +1,18 @@
 //
 //  SignUpViewController.m
-//  1Password Extension Demo
+//  GenericPassword Extension Demo
 //
 //  Created by Rad Azzouz on 2014-07-17.
 //  Copyright (c) 2014 AgileBits. All rights reserved.
 //
 
 #import "RegisterViewController.h"
-#import "OnePasswordExtension.h"
+#import "GenericPasswordExtension.h"
 #import "LoginInformation.h"
 
 @interface RegisterViewController () <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *onepasswordSignupButton;
+@property (weak, nonatomic) IBOutlet UIButton *genericpasswordSignupButton;
 
 @property (weak, nonatomic) IBOutlet UITextField *firstnameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastnameTextField;
@@ -25,14 +25,14 @@
 
 - (void)viewDidLoad {
 	[self.view setBackgroundColor:[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"register-background.png"]]];
-	[self.onepasswordSignupButton setHidden:![[OnePasswordExtension sharedExtension] isAppExtensionAvailable]];
+	[self.genericpasswordSignupButton setHidden:![[GenericPasswordExtension sharedExtension] isAppExtensionAvailable]];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
 	return UIStatusBarStyleDefault;
 }
 
-- (IBAction)saveLoginTo1Password:(id)sender {
+- (IBAction)saveLoginToGenericPassword:(id)sender {
 	NSDictionary *newLoginDetails = @{
 		AppExtensionTitleKey: @"ACME",
 		AppExtensionUsernameKey: self.usernameTextField.text ? : @"",
@@ -54,11 +54,11 @@
 
 	__weak typeof (self) miniMe = self;
 
-	[[OnePasswordExtension sharedExtension] storeLoginForURLString:@"https://www.acme.com" loginDetails:newLoginDetails passwordGenerationOptions:passwordGenerationOptions forViewController:self sender:sender completion:^(NSDictionary *loginDict, NSError *error) {
+	[[GenericPasswordExtension sharedExtension] storeLoginForURLString:@"https://www.acme.com" loginDetails:newLoginDetails passwordGenerationOptions:passwordGenerationOptions forViewController:self sender:sender completion:^(NSDictionary *loginDict, NSError *error) {
 
 		if (!loginDict) {
 			if (error.code != AppExtensionErrorCodeCancelledByUser) {
-				NSLog(@"Failed to use 1Password App Extension to save a new Login: %@", error);
+				NSLog(@"Failed to use GenericPassword App Extension to save a new Login: %@", error);
 			}
 			return;
 		}

@@ -84,7 +84,7 @@
                                     <segue destination="A1b-Kh-Nlq" kind="showDetail" id="XAw-Rt-sYU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDc-DW-cLJ" userLabel="1Password Button">
+                            <button opaque="NO" contentMode="center" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDc-DW-cLJ" userLabel="GenericPassword Button">
                                 <rect key="frame" x="410" y="166" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="huP-2W-TFk"/>
@@ -92,11 +92,11 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" image="onepassword-button">
+                                <state key="normal" image="genericpassword-button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="findLoginFrom1Password:" destination="vXZ-lx-hvc" eventType="touchDown" id="7Y1-l1-KN0"/>
+                                    <action selector="findLoginFromGenericPassword:" destination="vXZ-lx-hvc" eventType="touchDown" id="7Y1-l1-KN0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,7 +123,7 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="onepasswordSigninButton" destination="cDc-DW-cLJ" id="OqN-tt-ATm"/>
+                        <outlet property="genericpasswordSigninButton" destination="cDc-DW-cLJ" id="OqN-tt-ATm"/>
                         <outlet property="passwordTextField" destination="ZLv-94-XOA" id="5EJ-lR-Hpe"/>
                         <outlet property="usernameTextField" destination="Za2-pr-tWA" id="deo-tZ-W5r"/>
                     </connections>
@@ -190,18 +190,18 @@
                                     <segue destination="vXZ-lx-hvc" kind="showDetail" id="D5n-lQ-RMw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auP-WD-mbm" userLabel="1Password Button">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auP-WD-mbm" userLabel="GenericPassword Button">
                                 <rect key="frame" x="410" y="267" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="GXj-r8-Ege"/>
                                     <constraint firstAttribute="height" constant="44" id="Mys-Ca-bIm"/>
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" image="onepassword-button">
+                                <state key="normal" image="genericpassword-button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveLoginTo1Password:" destination="A1b-Kh-Nlq" eventType="touchDown" id="le6-YC-Kg2"/>
+                                    <action selector="saveLoginToGenericPassword:" destination="A1b-Kh-Nlq" eventType="touchDown" id="le6-YC-Kg2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -230,7 +230,7 @@
                     <connections>
                         <outlet property="firstnameTextField" destination="fwb-0l-b5N" id="jzn-C1-vHy"/>
                         <outlet property="lastnameTextField" destination="tjm-G7-GAO" id="iMF-6e-8xt"/>
-                        <outlet property="onepasswordSignupButton" destination="auP-WD-mbm" id="shh-KY-v0u"/>
+                        <outlet property="genericpasswordSignupButton" destination="auP-WD-mbm" id="shh-KY-v0u"/>
                         <outlet property="passwordTextField" destination="Tad-KG-Pea" id="kih-wU-v6C"/>
                         <outlet property="usernameTextField" destination="b1j-uQ-34p" id="ZSp-Se-GzP"/>
                     </connections>
@@ -355,18 +355,18 @@
                                     <segue destination="t8j-XO-qaX" kind="show" id="60D-yv-qSt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uar-xe-DZO" userLabel="1Password Button">
+                            <button opaque="NO" contentMode="center" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uar-xe-DZO" userLabel="GenericPassword Button">
                                 <rect key="frame" x="407" y="128" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="RV1-WL-4qD"/>
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" image="onepassword-button">
+                                <state key="normal" image="genericpassword-button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changePasswordIn1Password:" destination="zYf-Es-cb4" eventType="touchDown" id="Fhx-K3-Vic"/>
+                                    <action selector="changePasswordInGenericPassword:" destination="zYf-Es-cb4" eventType="touchDown" id="Fhx-K3-Vic"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -403,7 +403,7 @@
                         <outlet property="confirmPasswordTextField" destination="3fV-Ft-xek" id="2AI-mx-WCe"/>
                         <outlet property="freshPasswordTextField" destination="L9B-vu-VdN" id="7ep-cx-IAQ"/>
                         <outlet property="oldPasswordTextField" destination="naa-0h-M0B" id="pn9-Gg-qtA"/>
-                        <outlet property="onepasswordSigninButton" destination="uar-xe-DZO" id="MtH-C6-BAh"/>
+                        <outlet property="genericpasswordSigninButton" destination="uar-xe-DZO" id="MtH-C6-BAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJ1-B2-Xid" sceneMemberID="firstResponder"/>
@@ -411,7 +411,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="onepassword-button" width="27" height="27"/>
+        <image name="genericpassword-button" width="27" height="27"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="60D-yv-qSt"/>

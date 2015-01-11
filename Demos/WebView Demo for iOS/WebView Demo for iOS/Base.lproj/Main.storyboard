@@ -53,16 +53,16 @@
                                     <action selector="goForward:" destination="PEy-hN-KRP" eventType="touchDown" id="vMu-r5-cWk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cc-V6-wAB" userLabel="1Password Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cc-V6-wAB" userLabel="GenericPassword Button">
                                 <rect key="frame" x="54" y="26" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="SQq-i8-VvJ"/>
                                 </constraints>
-                                <state key="normal" image="onepassword-toolbar">
+                                <state key="normal" image="genericpassword-toolbar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="fillUsing1Password:" destination="PEy-hN-KRP" eventType="touchDown" id="5w3-em-v26"/>
+                                    <action selector="fillUsingGenericPassword:" destination="PEy-hN-KRP" eventType="touchDown" id="5w3-em-v26"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +88,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LYh-Q1-dMy"/>
                     <connections>
-                        <outlet property="onepasswordFillButton" destination="9cc-V6-wAB" id="Xon-YN-TmY"/>
+                        <outlet property="genericpasswordFillButton" destination="9cc-V6-wAB" id="Xon-YN-TmY"/>
                         <outlet property="searchBar" destination="Gvr-ci-v7c" id="k2Y-CX-whn"/>
                         <outlet property="webViewContainer" destination="2pf-d3-xB8" id="rh0-ia-5iC"/>
                     </connections>
@@ -99,6 +99,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="onepassword-toolbar" width="27" height="27"/>
+        <image name="genericpassword-toolbar" width="27" height="27"/>
     </resources>
 </document>

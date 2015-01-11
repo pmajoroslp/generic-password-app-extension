@@ -1,6 +1,6 @@
 //
 //  WebViewController.m
-//  1Password Extension Demo
+//  GenericPassword Extension Demo
 //
 //  Created by Dave Teare on 2014-07-19.
 //  Copyright (c) 2014 AgileBits. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import "WebViewController.h"
 
-#import "OnePasswordExtension.h"
+#import "GenericPasswordExtension.h"
 
 @interface WebViewController() <UISearchBarDelegate, WKNavigationDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *onepasswordFillButton;
+@property (weak, nonatomic) IBOutlet UIButton *genericpasswordFillButton;
 @property (weak, nonatomic) IBOutlet UIView *webViewContainer;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) WKWebView *webView;
@@ -24,7 +24,7 @@
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad {
-	[self.onepasswordFillButton setHidden:![[OnePasswordExtension sharedExtension] isAppExtensionAvailable]];
+	[self.genericpasswordFillButton setHidden:![[GenericPasswordExtension sharedExtension] isAppExtensionAvailable]];
 
 	WKWebViewConfiguration *configuration = [WKWebViewConfiguration new];
 	self.webView = [[WKWebView alloc] initWithFrame:self.webViewContainer.bounds configuration:configuration];
@@ -39,8 +39,8 @@
 
 #pragma mark - Actions
 
-- (IBAction)fillUsing1Password:(id)sender {
-	[[OnePasswordExtension sharedExtension] fillLoginIntoWebView:self.webView forViewController:self sender:sender completion:^(BOOL success, NSError *error) {
+- (IBAction)fillUsingGenericPassword:(id)sender {
+	[[GenericPasswordExtension sharedExtension] fillLoginIntoWebView:self.webView forViewController:self sender:sender completion:^(BOOL success, NSError *error) {
 		if (!success) {
 			NSLog(@"Failed to fill login in webview: <%@>", error);
 		}

@@ -1,5 +1,5 @@
 //
-//  1Password Extension
+//  GenericPassword Extension
 //
 //  Lovingly handcrafted by Dave Teare, Michael Fey, Rad Azzouz, and Roustem Karimov.
 //  Copyright (c) 2014 AgileBits. All rights reserved.
@@ -30,7 +30,7 @@
 #define AppExtensionGeneratedPasswordMaxLengthKey @"password_max_length"
 
 // Errors
-#define AppExtensionErrorDomain                   @"OnePasswordExtension"
+#define AppExtensionErrorDomain                   @"GenericPasswordExtension"
 
 #define AppExtensionErrorCodeCancelledByUser                    0
 #define AppExtensionErrorCodeAPINotAvailable                    1
@@ -43,15 +43,15 @@
 
 // Note to creators of libraries or frameworks:
 // If you include this code within your library, then to prevent potential duplicate symbol
-// conflicts for adopters of your library, you should rename the OnePasswordExtension class.
-// You might to so by adding your own project prefix, e.g., MyLibraryOnePasswordExtension.
+// conflicts for adopters of your library, you should rename the GenericPasswordExtension class.
+// You might to so by adding your own project prefix, e.g., MyLibraryGenericPasswordExtension.
 
-@interface OnePasswordExtension : NSObject
+@interface GenericPasswordExtension : NSObject
 
-+ (OnePasswordExtension *)sharedExtension;
++ (GenericPasswordExtension *)sharedExtension;
 
 /*!
- Determines if the 1Password Extension is available. Allows you to only show the 1Password login button to those
+ Determines if the GenericPassword Extension is available. Allows you to only show the GenericPassword login button to those
  that can use it. Of course, you could leave the button enabled and educate users about the virtues of strong, unique 
  passwords instead :)
  
@@ -72,7 +72,7 @@
 - (void)findLoginForURLString:(NSString *)URLString forViewController:(UIViewController *)viewController sender:(id)sender completion:(void (^)(NSDictionary *loginDict, NSError *error))completion;
 
 /*!
- Create a new login within 1Password and allow the user to generate a new password before saving. The provided URLString should be 
+ Create a new login within GenericPassword and allow the user to generate a new password before saving. The provided URLString should be 
  unique to your app or service and be identical to what you pass into the find login method.
  
  Details about the saved login, including the generated password, are stored in an NSDictionary and given to your completion handler. 
@@ -83,7 +83,7 @@
 - (void)storeLoginForURLString:(NSString *)URLString loginDetails:(NSDictionary *)loginDetailsDict passwordGenerationOptions:(NSDictionary *)passwordGenerationOptions forViewController:(UIViewController *)viewController sender:(id)sender completion:(void (^)(NSDictionary *loginDict, NSError *error))completion;
 
 /*!
- Change the password for an existing login within 1Password. The provided URLString should be
+ Change the password for an existing login within GenericPassword. The provided URLString should be
  unique to your app or service and be identical to what you pass into the find login method. The username must be the one that the user is currently logged in with.
 
  Details about the saved login, including the newly generated and the old password, are stored in an NSDictionary and given to your completion handler.

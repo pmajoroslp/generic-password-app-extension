@@ -3,27 +3,27 @@
     {
       "idiom" : "iphone",
       "scale" : "1x",
-      "filename" : "onepassword-extension~compact.png"
+      "filename" : "genericpassword-extension~compact.png"
     },
     {
       "idiom" : "iphone",
       "scale" : "2x",
-      "filename" : "onepassword-extension@2x~compact.png"
+      "filename" : "genericpassword-extension@2x~compact.png"
     },
     {
       "idiom" : "iphone",
       "scale" : "3x",
-      "filename" : "onepassword-extension@3x~compact.png"
+      "filename" : "genericpassword-extension@3x~compact.png"
     },
     {
       "idiom" : "ipad",
       "scale" : "1x",
-      "filename" : "onepassword-extension~regular.png"
+      "filename" : "genericpassword-extension~regular.png"
     },
     {
       "idiom" : "ipad",
       "scale" : "2x",
-      "filename" : "onepassword-extension@2x~regular.png"
+      "filename" : "genericpassword-extension@2x~regular.png"
     }
   ],
   "info" : {
