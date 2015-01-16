@@ -14,10 +14,10 @@ You might be looking at this 13 KB README and think integrating with GenericPass
 
 If you're the type that just wants the code, here it is:
 
-* [GenericPasswordExtension.h](https://raw.githubusercontent.com/AgileBits/genericpassword-app-extension/master/GenericPasswordExtension.h?token=110676__eyJzY29wZSI6IlJhd0Jsb2I6QWdpbGVCaXRzL29uZXBhc3N3b3JkLWFwcC1leHRlbnNpb24vbWFzdGVyL09uZVBhc3N3b3JkRXh0ZW5zaW9uLmgiLCJleHBpcmVzIjoxNDA3Mjg0MTMwfQ%3D%3D--3867c64b22a5923bead5948001ce2ff048892799)
-* [GenericPasswordExtension.m](https://raw.githubusercontent.com/AgileBits/genericpassword-app-extension/master/GenericPasswordExtension.m?token=110676__eyJzY29wZSI6IlJhd0Jsb2I6QWdpbGVCaXRzL29uZXBhc3N3b3JkLWFwcC1leHRlbnNpb24vbWFzdGVyL09uZVBhc3N3b3JkRXh0ZW5zaW9uLm0iLCJleHBpcmVzIjoxNDA3Mjg0MTA5fQ%3D%3D--05c6ea9c73d0afb9f30e53a31d81df00b7c02077)
+* [GenericPasswordExtension.h](https://raw.githubusercontent.com/joelastpass/generic-password-app-extension/master/GenericPasswordExtension.h)
+* [GenericPasswordExtension.m](https://raw.githubusercontent.com/joelastpass/generic-password-app-extension/master/GenericPasswordExtension.m)
 
-Simply include these two files in your project, add a button with a [GenericPassword login image](https://github.com/AgileBits/genericpassword-app-extension/tree/master/GenericPassword.xcassets) on it to your view, set the button's action to call the appropriate GenericPasswordExtension method, and you're all set!
+Simply include these two files in your project, add a button with a [GenericPassword login image](https://github.com/joelastpass/generic-password-app-extension/tree/master/GenericPassword.xcassets) on it to your view, set the button's action to call the appropriate GenericPasswordExtension method, and you're all set!
 
 
 ## Running the Sample Apps
@@ -27,7 +27,7 @@ Adding GenericPassword support to your app is easy. To demonstrate how it works,
 
 ### Step 1: Download the Source Code and Sample Apps
 
-To get started, download the GenericPassword Extension project from https://github.com/AgileBits/genericpassword-app-extension/archive/master.zip, or [clone it from GitHub](https://github.com/AgileBits/genericpassword-app-extension).
+To get started, download the GenericPassword Extension project from https://github.com/joelastpass/generic-password-app-extension/archive/master.zip, or [clone it from GitHub](https://github.com/joelastpass/generic-password-app-extension).
 
 Inside the downloaded folder, you'll find the resources needed to integrate with GenericPassword, such as images and sample code. The sample code includes two apps from ACME Corporation: one that demonstrates how to integrate the GenericPassword Login and Registration features, as well as a web browser that showcases the web view Filling feature.
 
@@ -43,8 +43,6 @@ To install 1Password, you will need to download it from the [App Store](http://j
 ### Step 3: Run the Apps
 
 Open `GenericPassword Extension Demos` Xcode workspace from within the `Demos` folder with Xcode 6, and then select the `ACME` target and set it to run your iOS device:
-
-<img src="http://i.agilebits.com/dt/Menubar_and_SignInViewController_m_and_README_md_—_genericpassword-extension__git__master__197DEA31.png" width="342" height="150">
 
 Since you will not have a Password Manager running within your iOS Simulator, it is important that you run on your device.
 
@@ -63,7 +61,6 @@ Be forewarned, however, that there is not much code to get dirty with. If you we
 
 Add the `GenericPasswordExtension.h`, `GenericPasswordExtension.m`, and `GenericPassword.xcassets` to your project and import `GenericPasswordExtension.h` in your view contoller that implements the action for the GenericPassword button.
 
-<img src="http://cl.ly/image/2g3B1r2O2z0L/Image%202014-07-29%20at%209.19.36%20AM.png" width="260" height="237"/>
 
 ### Use Case #1: Native App Login
 
