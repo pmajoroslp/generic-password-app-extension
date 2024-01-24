@@ -254,4 +254,3 @@ If you open up GenericPasswordExtension.m and start poking around, you'll be int
 Contact us, please! We'd love to hear from you about how you integrated GenericPassword within your app, how we can further improve things.
 
 You can reach LastPass at support@LastPass.com, or if you prefer, [@LastPass](https://twitter.com/LastPass) on Twitter.
-You can reach Agilebits at support+appex@agilebits.com, or if you prefer, [@1PasswordBeta](https://twitter.com/1PasswordBeta) on Twitter.
